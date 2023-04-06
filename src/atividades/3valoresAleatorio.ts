@@ -3,6 +3,19 @@ function filterArray (arr) {
     return arrEmbaralhado.slice(0, 3);
 }
 
+function filterArray2(array) {
+    const arrayFiltered: Array<object> = []
+    const newArray = [...array]
+
+    while(arrayFiltered.length < 3) {
+        let randomIndex = Math.floor(Math.random() * newArray.length)
+        arrayFiltered.push(newArray[randomIndex])
+        newArray.splice(randomIndex,1)
+    }
+    
+    return arrayFiltered
+}
+
 const arr = [
     { id: 1, nome: "Objeto 1" },
     { id: 2, nome: "Objeto 2" },
@@ -17,4 +30,7 @@ const arr = [
     { id: 12, nome: "Objeto 12" },
   ]
 
-console.log(filterArray(arr))
+for (let index = 0; index < 15; index++) {
+  console.log(filterArray2(arr))
+  console.log("----------------")
+}

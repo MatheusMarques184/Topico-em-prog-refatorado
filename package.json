@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "sucrase-node src/server.ts",
+    "dev2": "sucrase-node src/atividades/3valoresAleatorio.ts",
     "test": "jest"
   },
   "keywords": [],
